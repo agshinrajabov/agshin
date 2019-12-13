@@ -1,0 +1,257 @@
+{{> header}}
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css" rel="stylesheet" />
+
+<body>
+
+    {{> nav}}
+
+    <section class="title">
+        <div class="container">
+            <div class="default-title">
+                {{data.name}}
+            </div>
+        </div>
+    </section>
+    <section class="container m1">
+        <div class="card">
+            <div class="card-titles">
+                <ul id="tabs">
+                    <li>
+                        <a class="tab-link tab-active" data-tab="#tab-1">AÇIQLAMA</a>
+                    </li>
+                    <li>
+                        <a class="tab-link" data-tab="#tab-2">DETAYLAR</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-container card-active" id="tab-1">
+                <p>
+                    {{data.description}}
+
+                </p>
+            </div>
+            <div class="card-container" id="tab-2">
+                <p>
+                    {{data.details}}
+
+                </p>
+            </div>
+        </div>
+        <div class="api-title">
+            ENDPOINTS
+        </div>
+        {{#if (oEmpty data.getParameters.area)}}
+        <div class="card">
+            <a class="api-head">
+                <div class="api-method get">GET</div>
+                <div class="api-link">{{data.getParameters.link}}</div>
+            </a>
+            <div class="api-container">
+                <div class="api-container-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Alan</th>
+                                <th>Açıklama</th>
+                                <th>Tip</th>
+                                <th>Başlık</th>
+                                <th>Zorunlu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{data.getParameters.area}}</td>
+                                <td>{{data.getParameters.description}}</td>
+                                <td>{{data.getParameters.type}}</td>
+                                <td>{{data.getParameters.head}}</td>
+                                <td>{{data.getParameters.required}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="api-title light-text">
+                    ENDPOINTS
+                </div>
+                <div class="api-code request">
+                    <a id="kopyala" class="api-copy"><i class="fas fa-copy"></i> Kopyala</a>
+                    <pre><code class="language-json">{{clean data.getParameters.request}}</code></pre>
+                </div>
+                <div class="api-code response">
+                    <a id="kopyala" class="api-copy"><i class="fas fa-copy"></i> Kopyala</a>
+                    <pre><code class="language-json">{{data.getParameters.request}}</code></pre>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if (oEmpty data.postParameters.area)}}
+        <div class="card">
+            <a class="api-head">
+                <div class="api-method post">POST</div>
+                <div class="api-link">{{data.postParameters.link}}</div>
+            </a>
+            <div class="api-container">
+                <div class="api-container-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Alan</th>
+                                <th>Açıklama</th>
+                                <th>Tip</th>
+                                <th>Başlık</th>
+                                <th>Zorunlu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{data.postParameters.area}}</td>
+                                <td>{{data.postParameters.description}}</td>
+                                <td>{{data.postParameters.type}}</td>
+                                <td>{{data.postParameters.head}}</td>
+                                <td>{{data.postParameters.required}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="api-title light-text">
+                    ENDPOINTS
+                </div>
+                <div class="api-code request">
+                    <a href="#" class="api-copy"><i class="fas fa-copy"></i> Kopyala</a>
+                    <pre><code class="language-json">{{data.postParameters.request}}</code></pre>
+                </div>
+                <div class="api-code response">
+                    <a href="#" class="api-copy"><i class="fas fa-copy"></i> Kopyala</a>
+                    <pre><code class="language-json">{{data.postParameters.response}}</code></pre>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+
+    </section>
+    </div>
+    <footer class="hooter m1">
+        <div class="container">
+            <div class="hooter-footer">
+                <div class="hooter-col">
+                    <div class="hooter-footer__title">
+                        Have a great idea?
+                    </div>
+                    <div class="hooter-footer__subtitle">
+                        Let’s work together
+                    </div>
+                    <div class="hooter-footer__container">
+                        <div class="hooter-footer__container__title">
+                            Service
+                        </div>
+                        <div class="hooter-footer__container__details">
+                            <form action="index.html">
+                                <div class="selections">
+                                    <div class="label-button">
+                                        <label>
+                                            <input type="checkbox" value="1"><span>Design</span>
+                                        </label>
+                                    </div>
+                                    <div class="label-button">
+                                        <label>
+                                            <input type="checkbox" value="2"><span>Development</span>
+                                        </label>
+                                    </div>
+                                    <div class="label-button">
+                                        <label>
+                                            <input type="checkbox" value="2"><span>UX</span>
+                                        </label>
+                                    </div>
+                                    <div class="label-button">
+                                        <label>
+                                            <input type="checkbox" value="2"><span>Coaching</span>
+                                        </label>
+                                    </div>
+                                    <div class="label-button">
+                                        <label>
+                                            <input type="checkbox" value="2"><span>Startup</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="information">
+                                    <img src="./img/arrow.png" alt="Next step" width="50">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hooter-col">
+                    <div class="hooter-footer__title">
+                        Fill in this form or <a href="mailto:info@agsh.in">send us an e-mail.</u>
+                    </div>
+                    <form action="" class="hooter-footer__form">
+                        <label for="name">
+                            <input id="name" type="text" placeholder="Name" class="footer-input">
+                        </label>
+                        <label for="email">
+                            <input id="email" type="text" placeholder="E-mail" class="footer-input">
+                        </label>
+                        <label for="message">
+                            <textarea name="" id="message" placeholder="Message" class="footer-input"></textarea>
+                        </label>
+                        <div class="information">
+                            <button type="button" class="footer-button" id="open-dialog">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="hooter-col">
+                    <div class="hooter-footer__subtitle">
+                        Contacts
+                    </div>
+                    <div class="hooter-footer__contact">
+                        <div class="hooter-footer__contact__details">
+                            <div class="hooter-footer__contact__details__subtitle">
+                                Hire Me
+                            </div>
+                            <div class="hooter-footer__contact__details__title">
+                                info@agsh.in
+                            </div>
+                            <div class="hooter-footer__contact__details__title">
+                                +994 55 785 75 85
+                            </div>
+                        </div>
+                        <div class="hooter-footer__contact__details">
+                            <div class="hooter-footer__contact__details__subtitle">
+                                Follow
+                            </div>
+                            <div class="hooter-footer__contact__details__title">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js    "></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    {{> hooter}}
+</body>
+
+</html>

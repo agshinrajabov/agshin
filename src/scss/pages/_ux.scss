@@ -1,0 +1,133 @@
+.ux-platforms {
+    margin-top:2rem;
+    position: relative;
+    &:before {
+        transition: all .1s ease-in;
+
+        text-align: center;
+        margin: 0 auto;
+        content: 'Hover';
+        position: absolute;
+        z-index: 4;
+        left:0;
+        right:0;
+        bottom:0;
+        top:50%;
+
+        color:white;
+        font-size:.8rem;
+        line-height: 4rem;
+        font-family: 'gilroy-bold', sans-serif;
+        background-color:$primary;
+        width:4rem;
+        height:4rem;
+        border-radius: 100px;
+        @include device(p) {
+            opacity: 0;
+        }
+    }
+    &:after {
+        transition: all .1s ease-in;
+
+        text-align: center;
+        margin: 0 auto;
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left:0;
+        right:0;
+        bottom:0;
+        top:40%;
+        transform: translateY(40%);
+        width:6rem;
+        height:6rem;
+        border-radius: 100px;
+        animation: bgToOpacity 1s ease-in-out infinite 0s forwards;
+
+        @include device(p) {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        transition: all .1s ease-in;
+        &:before, &:after {
+            opacity: 0;
+        }
+    }
+    .ux-platforms-mobile {
+        background-image: url(../img/ux/1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:60vh;
+        cursor: pointer;
+        position: relative;
+        @include device(p) {
+            height:200px;
+            filter: drop-shadow(0px 20px 15px #b8b8b8);
+        }
+        &:before {
+            content:'';
+            position: absolute;
+            background-image: url(../img/ux/3.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            top:0;
+            left:0;
+            width:100%;
+            z-index: -2;
+            height:60vh;
+            opacity: 0;
+            transition: all .1s ease-in;
+
+            @include device(p) {
+                height:200px;
+                opacity: 1;
+                background-position: left;
+            }
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            background-image: url(../img/ux/2.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top:0;
+            right:0;
+            width:100%;
+            z-index: -2;
+            height:60vh;
+            opacity: 0;
+            transition: all .1s ease-in;
+            @include device(p) {
+                height:200px;
+                opacity: 1;
+                background-position: right;
+            }
+        }
+        &:hover:after {
+            opacity: 1;
+            background-position: right;
+            @include device(p) {
+                height:200px;
+                opacity: 1;
+                background-position: right;
+            }
+        }
+        &:hover:before {
+            opacity: 1;
+            background-position: 2vh;
+            @include device(p) {
+                height:200px;
+                opacity: 1;
+                background-position: left;
+            }
+        }
+        &:hover {
+            filter: drop-shadow(0px 20px 15px #b8b8b8);
+        }
+    }
+}

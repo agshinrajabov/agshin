@@ -1,0 +1,39 @@
+.coaching-details-works-logos {
+    i {
+        font-size:4rem;
+        color:$dark;
+    }
+    img {
+        filter:grayscale(100%);
+    }
+}
+
+
+.platforms li{
+    position: relative;
+    height:4rem;
+    display: flex;
+    align-items: flex-end;
+    &:hover:before {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+}
+
+.platforms li:before {
+    content: attr(data-lang);
+    position: absolute;
+    top:0;
+    background-color: red;
+    border-radius: 4px;
+    padding:.4rem .8rem;
+    margin:0 auto;
+    z-index:2;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in;
+    font-size:.6rem;
+    color:white;
+    font-family: 'gilroy-bold',sans-serif;
+}

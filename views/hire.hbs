@@ -1,0 +1,73 @@
+{{> header}}
+
+<body>
+    {{> nav}}
+    <section class="title">
+        <div class="container">
+            <div class="hires">
+                <div class="hire-form">
+                    <div class="default-title">{{message}}</div>
+                    <div class="hire-subtitle">Fill in this form or <a href="#">send us an e-mail.</a></div>
+                    <div class="hire-services">
+                        <div class="hire-services-title">Choose Service(s)</div>
+                        <div class="hire-services-container">
+                            <form method="POST" id="hire-form-serial">
+                                <div class="selections">
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="Design"><span>Design</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="Development"><span>Development</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="UX"><span>UX</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="Coaching"><span>Coaching</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="Startup"><span>Startup</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="Help"><span>Help</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="Training"><span>Training</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="SEO"><span>SEO</span></label></div>
+                                    <div class="contact-label"><label><input type="checkbox" name="hireServices"
+                                                value="ASO"><span>ASO</span></label></div>
+                                </div>
+                                <div class="form-fields"><label for="name"><input id="name" type="text"
+                                            placeholder="Name" name="name" class="contact-input"></label> <label for="email"><input
+                                            id="email" name="email" type="text" placeholder="E-mail" class="contact-input"></label>
+                                    <label for="message"><textarea name="message" id="message" placeholder="Message"
+                                            class="contact-input"></textarea></label></div>
+                                <div class="form-button"><button type="submit" class="contact-button">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="hire-contacts">
+                    <div class="default-title">Contacts</div>
+                    <div class="hire-contacts-container">
+                        <div class="hire-contacts-container-details">
+                            <div class="hire-contacts-container-details-field">info@agsh.in</div>
+                            <div class="hire-contacts-container-details-field">+994 55 785 75 85</div>
+                        </div>
+                    </div>
+                    <div class="hire-contacts-container">
+                        <div class="hire-contacts-container-title">Follow Me</div>
+                        <div class="hire-contacts-container-follow">
+                            <ul>
+                                        <li><a href="https://dribbble.com/agshinrajabov" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+                    <li><a href="https://www.instagram.com/thedevfather/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/c/shuffleuniversity" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    {{!-- <li><a href="#"><i class="fab fa-github"></i></a></li> --}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{> hooter}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+</body>
+
+</html>

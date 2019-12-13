@@ -1,0 +1,64 @@
+{{> header}}
+
+<body>
+           {{> nav}}
+
+    <section class="title">
+        <div class="container">
+            <div class="default-title">Works</div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="works-area">
+            {{#each data}}
+            <a {{#if link}} href="{{link}}" target="_blank" {{/if}} class="works-col" data-name="{{name}} - {{description}}">
+                    <div class="work-img">
+                        <img src="{{image}}" alt="{{name}}">
+                        {{#if hoverImage}}
+                            <img class="hover-img" src="{{hoverImage}}" alt="{{name}}">
+                        {{/if}}
+                        {{#if process}}
+                            <div class="process">Work in process..</div>
+                        {{/if}}
+                    </div>
+                </a>
+            {{/each}}
+            <a class="works-col" data-name="AllRent - Apartments for daily rent">
+                <div class="work-img"><img src="./assets/img/projects/allrent/1.jpg" alt="Allrent"> <img class="hover-img"
+                        src="./assets/img/projects/allrent/2.jpg" alt="Allrent">
+                    <div class="process">Work in process..</div>
+                </div>
+            </a>
+            <a href="http://bitly.com/bankoios" target="_blank" class="works-col" data-name="Daily Bet Tips - Betting forecast" >
+                <div class="work-img">
+                    <img src="./assets/img/projects/guncelbanko/1.jpg" alt="Güncel Banko Maçlar"> <img
+                        class="hover-img" src="./assets/img/projects/guncelbanko/2.jpg" alt="Güncel Banko Maçlar">
+                        </div>
+            </a>
+            <a href="http://tucev.org/" target="_blank" class="works-col" data-name="Tucev - Turkey Evr. Consv. Foundation">
+                <div class="work-img"><img src="./assets/img/projects/tucev/1.jpg" alt="TÜÇEV"></div>
+            </a>
+            <a class="works-col" data-name="Azersun - Rebranding">
+                <div class="work-img"><img src="./assets/img/projects/azersun/1.jpg" alt="Azersun"></div>
+            </a>
+            <a href="https://apps.apple.com/us/app/money-master-tracking-money/id1469355866" target="_blank" class="works-col" data-name="Money Manager">
+                <div class="work-img"><img src="./assets/img/projects/money/1.jpg" alt="Money Manager"> <img class="hover-img"
+                        src="./assets/img/projects/money/2.jpg" alt="Money Manager"></div>
+            </a>
+            <a class="works-col" data-name="Mafgram - Social media services" data-name="AllRent">
+                <div class="work-img"><img src="./assets/img/projects/mafgram/1.jpg" alt="Mafgram"></div>
+            </a>
+            <a href="https://apps.apple.com/us/app/quote-maker-make-own-quote/id1465228991?ls=1" target="_blank" class="works-col" data-name="Quote Maker - Make Own Quote">
+                <div class="work-img"><img src="./assets/img/projects/quote/1.jpg" alt="Quote Maker"> <img class="hover-img"
+                        src="./assets/img/projects/quote/2.jpg" alt="Quote Maker"></div>
+            </a>
+            <a class="works-col" data-name="Okeytube - Webinar Center">
+                <div class="work-img"><img src="./assets/img/projects/okeytube/1.jpg" alt="Okeytube"></div>
+            </a>
+        </div>
+    </section>
+    {{> footer}}
+    {{> hooter}}
+</body>
+
+</html>

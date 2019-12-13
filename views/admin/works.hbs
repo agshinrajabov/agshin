@@ -1,0 +1,115 @@
+{{> admin/thisheader}}
+
+<!-- Top Bar End -->
+
+<div class="page-content-wrapper ">
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="float-right page-breadcrumb">
+
+                </div>
+                <h5 class="page-title">Works</h5>
+            </div>
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+            <div class="col-6">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>AllRent.Az</td>
+                                        <td> <a class="btn btn-danger">
+                                                Delete
+                                                </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+
+                            <h4 class="mt-0 header-title">New Work</h4>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input name="workName" class="form-control" type="text" placeholder="Name of work">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Work Description</label>
+                                <div class="col-sm-10">
+                                    <input name="workDescription" class="form-control" type="text"
+                                        placeholder="Description of work">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <input name="workImage" class="form-control" type="file"
+                                        placeholder="Description of Tool">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Hover Image</label>
+                                <div class="col-sm-10">
+                                    <input name="workHoverImage" class="form-control" type="file"
+                                        placeholder="Details of Tool">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Link (if it has)</label>
+                                <div class="col-sm-10">
+                                    <input name="workLink" class="form-control" type="text"
+                                        placeholder="Details of Tool">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Work in Process?</label>
+                                <div class="col-sm-10">
+                                    <input name="workProccess" class="form-control" type="checkbox">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group m-b-0 float-right">
+                        <div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                Submit
+                            </button>
+                            <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+
+    </div><!-- container fluid -->
+
+</div> <!-- Page content Wrapper -->
+
+</div> <!-- content -->
+{{> admin/thisfooter}}

@@ -1,0 +1,109 @@
+.coaching {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include device(p) {
+        flex-direction: column;
+    }
+    .coaching-details {
+        flex:2;
+        @include device(p) {
+            width:100%;
+            flex:1;
+            order:2;
+        }
+        p.coaching-details-subtext {
+            text-align: left;
+            font-size:1rem;
+            width: 80%;
+            line-height: 1.6;
+            font-family: 'gilroy-light', sans-serif;
+        }
+        p.coaching-details-text {
+            position: relative;
+            padding-top:2rem;
+            &:before {
+                content:'';
+                position: absolute;
+                top:0;
+                left:0;
+                width:20%;
+                height: 3px;
+                background-color:$primary;
+            }
+        }
+        p {
+            text-align: left;
+            font-size:1.2rem;
+            width: 80%;
+            line-height: 1.6;
+            font-family: 'gilroy-regular', sans-serif;
+            padding-top:0rem;
+        }
+        .coaching-details-works {
+            margin-top:4rem;
+            .default-title {
+                font-size:2.2rem;
+            }
+            .coaching-details-works-logos {
+                margin-top:2rem;
+                margin-bottom:4rem;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    @include device(p) {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    li:not(:last-child) {
+                        margin-right:4rem;
+                    }
+                    li {
+                        width:60px;
+                        @include device(p) {
+                            margin-bottom:2rem;
+                        }
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+        .coaching-details-works-talk {
+            margin-top:2rem;
+            margin-bottom:4rem;
+            .talk-button {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .coaching-image{
+       flex:1;
+       @include device(p) {
+            margin-top:2rem;
+            order:1;
+        }
+        figure {
+            margin:0;
+            padding:0;
+            float: right;
+            text-align: right;
+            width: 100%;
+            img {
+                border-radius: 26px;
+                width: 100%;
+            }
+            figcaption {
+                letter-spacing: .03rem;
+                padding-top:1rem;
+                padding-right:1rem;
+                font-size:.9rem;
+                font-style: italic;;
+                font-family: 'gilroy-regular', sans-serif;
+            }
+        }
+    }
+}

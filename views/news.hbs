@@ -1,0 +1,27 @@
+{{> header}}
+<body>
+           {{> nav}}
+
+    <section class="title">
+        <div class="container">
+            <div class="default-title">News</div>
+        </div>
+    </section>
+    <section class="container" style="margin-bottom:10rem">
+        <div class="news-area">
+        {{#each data}}
+            <a href="{{link}}" class="news-col" target="_blank">
+                <div class="news-author">{{company}}</div>
+                <div class="news-col-title">{{title}}</div>
+                <div class="news-col-description">
+                    <p>{{description}}</p>
+                </div>
+            </a>
+        {{/each}}
+        </div>
+    </section>
+    {{> footer}}
+   {{> hooter}}
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+//Normalize
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+//Fonts
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css);
+
+
+@font-face {
+    font-family: 'gilroy-bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('gilroy-bold'), url('../img/fonts/Gilroy-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'gilroy-heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: local('gilroy-heavy'), url('../img/fonts/Gilroy-Heavy.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'gilroy-light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('gilroy-light'), url('../img/fonts/Gilroy-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'gilroy-medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('gilroy-medium'), url('../img/fonts/Gilroy-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'gilroy-regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('gilroy-regular'), url('../img/fonts/Gilroy-Regular.woff') format('woff');
+}
+
+//Base
+@import "./base/variables";
+@import "./base/func";
+@import "./base/utils";
+
+//Pages
+@import "./pages/home";
+@import "./pages/works";
+@import "./pages/tools";
+@import "./pages/api";
+@import "./pages/hire";
+@import "./pages/coach";
+@import "./pages/news";
+@import "./pages/mobile";
+@import "./pages/ux";
+
+

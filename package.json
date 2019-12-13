@@ -1,0 +1,47 @@
+{
+  "name": "agsh.in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "font-awesome": "^4.7.0",
+    "gulp4-run-sequence": "^0.4.0",
+    "jquery": "^3.3.1",
+    "limax": "^2.0.0",
+    "mongoose": "^5.8.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.2",
+    "normalize-scss": "^7.0.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-core": "^6.26.3",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-hb": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "run-sequence": "^2.2.1"
+  },
+  "license": "ISC"
+}

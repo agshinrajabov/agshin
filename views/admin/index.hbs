@@ -1,0 +1,266 @@
+{{> admin/thisheader}}
+                <!-- Top Bar End -->
+
+                <div class="page-content-wrapper ">
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="float-right page-breadcrumb">
+
+                                </div>
+                                <h5 class="page-title">Tools</h5>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Services</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                {{#each data}}
+<tr>
+                                                        <td>{{name}}</td>
+                                                        <td> <a  class="btn btn-danger">
+                                                                Delete
+                                                            </button></td>
+                                                    </tr>
+                                                {{/each}}
+                                                   
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-6">
+                                <form method="POST" enctype="multipart/form-data">
+                                    <div class="card m-b-30">
+                                    <div class="card-body">
+
+                                        <h4 class="mt-0 header-title">New Tool</h4>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <input name="toolName" class="form-control" type="text"
+                                                        placeholder="Name of tool">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Description</label>
+                                                <div class="col-sm-10">
+                                                    <input name="toolDescription" class="form-control" type="text"
+                                                        placeholder="Description of Tool">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Logo</label>
+                                                <div class="col-sm-10">
+                                                    <input name="toolLogo" class="form-control" type="file"
+                                                        placeholder="Logo of Tool">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Details</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="toolDetails" class="form-control" type="text"
+                                                            placeholder="Details of Tool">
+                                                    </div>
+                                                </div>
+                                    </div>
+                                    </div>
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <h4 class="mt-0 header-title">Endpoints</h4>
+                                            <p class="text-muted m-b-30 font-14">If it has not get or post please don't
+                                                touch bro!</p>
+
+                                            <div id="accordion">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingOne">
+                                                        <h5 class="mb-0 mt-0 font-16">
+                                                            <a data-toggle="collapse" data-parent="#accordion"
+                                                                href="#collapseOne" aria-expanded="false"
+                                                                aria-controls="collapseOne" class="text-dark collapsed">
+                                                                GET
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Link</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="parametrLink" class="form-control"
+                                                                        type="text" placeholder="Area of Parametr">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Area</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="parametrArea" class="form-control"
+                                                                        type="text" placeholder="Area of Parametr">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Parametr Description</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="parametrDescription" class="form-control"
+                                                                        type="text" placeholder="Description of Parametr">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Type</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="parametrType" class="form-control"
+                                                                        type="text" placeholder="Type of Parametr">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Head</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="parametrHead" class="form-control"
+                                                                        type="text" placeholder="Head of Parametr">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Required?</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="parametrRequired" class="form-control"
+                                                                        type="checkbox">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Request</label>
+                                                                <div class="col-sm-10">
+                                                                        <textarea id="elm1" name="request"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Response</label>
+                                                                <div class="col-sm-10">
+                                                                        <textarea id="elm1" name="response"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h5 class="mb-0 mt-0 font-16">
+                                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                                    href="#collapseTwo" aria-expanded="false"
+                                                                    aria-controls="collapseTwo" class="text-dark collapsed">
+                                                                    POST
+                                                                </a>
+                                                            </h5>
+                                                        </div>
+
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingOne"
+                                                            data-parent="#accordion">
+                                                            <div class="card-body">
+                                                                <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Link</label>
+                                                                <div class="col-sm-10">
+                                                                    <input name="postParametrLink" class="form-control"
+                                                                        type="text" placeholder="Area of Parametr">
+                                                                </div>
+                                                            </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Area</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input name="postParametrArea" class="form-control"
+                                                                            type="text" placeholder="Area of Parametr">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Parametr Description</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input name="postParametrDescription" class="form-control"
+                                                                            type="text" placeholder="Description of Parametr">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Type</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input name="postParametrType" class="form-control"
+                                                                            type="text" placeholder="Type of Parametr">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Head</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input name="postParametrHead" class="form-control"
+                                                                            type="text" placeholder="Head of Parametr">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Required?</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input name="postParametrRequired" class="form-control"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Request</label>
+                                                                    <div class="col-sm-10">
+                                                                            <textarea id="elm1" name="postRequest"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Response</label>
+                                                                    <div class="col-sm-10">
+                                                                            <textarea id="elm1" name="postResponse"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group m-b-0 float-right">
+                                        <div>
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                Submit
+                                            </button>
+                                            <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+                    </div><!-- container fluid -->
+
+                </div> <!-- Page content Wrapper -->
+
+            </div> <!-- content -->
+{{> admin/thisfooter}}

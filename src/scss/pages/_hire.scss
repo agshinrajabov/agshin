@@ -1,0 +1,89 @@
+.hires {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    @include device(p) {
+        flex-direction: column;
+    }
+
+    .default-title {
+        font-size:3rem !important;
+    }
+    .hire-form {
+        width: 100%;
+        margin-right:5rem;
+        .hire-subtitle {
+            color:darken($color: $light, $amount: 40);
+            margin-top:1rem;
+            word-wrap: none;
+            font-size: 1.1rem;
+            font-family: "gilroy-light", sans-serif;
+            a {
+                color:$dark;
+                text-decoration: underline;
+                font-family: "gilroy-bold", sans-serif;
+            }    
+        }
+        .hire-services {
+            margin-top:2rem;
+            .hire-services-title {
+                color:darken($color: $light, $amount: 40);
+                font-family: "gilroy-light", sans-serif;
+                font-size: 1rem;
+            }
+            .hire-services-container {
+                margin-top:0.7rem;
+                width: 90%;
+                form {
+                    margin-bottom:2rem;
+
+
+                    display: flex;
+                    flex-direction: column;
+                    .form-fields {
+                        margin-top:1rem;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+    .hire-contacts {
+        width: 100%;
+        .hire-contacts-container {
+            margin-top:2rem;
+            .hire-contacts-container-details {
+                display: flex;
+                flex-direction: column;
+                .hire-contacts-container-details-field {
+                    font-family: 'gilroy-regular', sans-serif;
+                    font-size:1.4rem;
+                    &:not(:last-child) {
+                        margin-bottom:0.6rem;
+                    }
+                }
+            }
+            .hire-contacts-container-title {
+                font-family: 'gilroy-light', sans-serif;
+                font-size:1rem;
+                margin-top:3rem;
+            }
+            .hire-contacts-container-follow {
+                margin-top:1rem;
+                ul {
+                    display: flex;
+                    li {
+                        &:not(:last-child) {
+                            margin-right: 2rem;
+                        }
+                        a {
+                            font-size:1.4rem;
+                            color:$dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+ {{> header}}
+<body>
+           {{> nav}}
+
+    <section class="title">
+        <div class="container">
+            <div class="default-title">Tools</div>
+        </div>
+    </section>
+    <section class="container" style="margin-bottom:10rem">
+        <div class="tools-area">
+            {{#each data}}
+                <a href="/tools/{{link}}" class="tools-col">
+                    <div class="tools-col__img"><img src="{{logo}}" alt="{{name}}"></div>
+                    <div class="tools-col__details">
+                        <div class="tools-col__details__title">{{name}}</div>
+                        <div class="tools-col__details__subtitle">{{description}}</div>
+                    </div>
+                </a>
+            {{/each}}
+        </div>
+    </section>
+     {{> footer}}
+     {{> hooter}}
+</body>
+
+</html>

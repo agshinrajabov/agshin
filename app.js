@@ -65,28 +65,20 @@ currency(router);
 // adminHome(router);
 
 
-async function main(html) {
-    // Generate test SMTP service account from ethereal.email
-    // Only needed if you don't have a real mail account for testing
-    let testAccount = await nodemailer.createTestAccount();
-  
+async function main(html) {  
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        secure: false, 
-        port: 25,
+      service: 'Yandex',
       auth: {
-        user: 'akorecebov1@gmail.com', // generated ethereal user
-        pass: 'Melina2017!!' // generated ethereal password
-      }, tls: {
-        rejectUnauthorized: false
+        user: 'rajabov@agsh.in', // generated ethereal user
+        pass: 'Aksin2007!!' // generated ethereal password
       }
     });
-  
+
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Agshin Rajabov 👻" <akorecebov1@gmail.com>', // sender address
-      to: "akorecebov1@gmail.com", // list of receivers
+      from: '"Agshin Rajabov 👻" <rajabov@agsh.in>', // sender address
+      to: "rajabov@agsh.in", // list of receivers
       subject: "Let's Work Together / Agsh.In", // Subject line
       html: html // html body
     });
@@ -123,4 +115,8 @@ app.post('/together', urlencodedParser, (req,res) => {
 //Settings
 app.use('/', router);
 app.use(compression());
+app.get('*', (req, res) => {    
+  res.redirect('/');
+})
+
 app.listen(process.env.PORT || 6555);

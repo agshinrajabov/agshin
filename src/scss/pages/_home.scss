@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
-  @include device(p) {
-    .logo {
+
+  .logo {
+    width:10%;
+    @include device(p) {
       display: none;
+    }
+    img {
+      width: 100%;
     }
   }
   nav ul {
@@ -14,8 +19,8 @@
       margin-right: 2.5rem;
     }
     @include device(p) {
-      li:nth-child(4) {
-        display: none;
+      li:nth-child(3) {
+        display: none !important;
       }
     }
     a {
@@ -73,6 +78,11 @@ section {
       a {
         color: $dark;
         font-family: "gilroy-bold", sans-serif;
+        &:hover {
+          i {
+            box-shadow:  none;
+          }
+        }
         i {
           font-size: 1.2rem;
           padding: 1.3rem;

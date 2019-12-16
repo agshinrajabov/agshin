@@ -4,7 +4,7 @@
   padding-top: 2rem;
 
   .logo {
-    width:10%;
+    width:10rem;
     @include device(p) {
       display: none;
     }

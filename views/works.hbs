@@ -10,19 +10,6 @@
     </section>
     <section class="container">
         <div class="works-area">
-            {{#each data}}
-            <a {{#if link}} href="{{link}}" target="_blank" {{/if}} class="works-col" data-name="{{name}} - {{description}}">
-                    <div class="work-img">
-                        <img src="{{image}}" alt="{{name}}">
-                        {{#if hoverImage}}
-                            <img class="hover-img" src="{{hoverImage}}" alt="{{name}}">
-                        {{/if}}
-                        {{#if process}}
-                            <div class="process">Work in process..</div>
-                        {{/if}}
-                    </div>
-                </a>
-            {{/each}}
             <a class="works-col" data-name="AllRent - Apartments for daily rent">
                 <div class="work-img"><img src="./assets/img/projects/allrent/1.jpg" alt="Allrent"> <img class="hover-img"
                         src="./assets/img/projects/allrent/2.jpg" alt="Allrent">

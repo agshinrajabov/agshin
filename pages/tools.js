@@ -7,9 +7,4 @@ module.exports = function(router) {
             res.render('tools', {data:data});
         })
     });
-
-    router.get('/tools/:link', (req,res) => {
-        const link = req.params.link;
-        Tool.findOne({link: link}, (err,data) => !err ? res.render('api', {data:data}) : console.log(err));
-    })
 }

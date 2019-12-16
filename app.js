@@ -27,6 +27,10 @@ const web = require('./pages/services/web');
 const mobile = require('./pages/services/mobile');
 const branding = require('./pages/services/branding');
 
+//Tools
+const oxu = require('./pages/tools/oxu');
+const currency = require('./pages/tools/currency');
+
 //Admin
 const adminHome = require('./pages/admin/app');
 
@@ -52,6 +56,10 @@ ux(router);
 mobile(router);
 web(router);
 branding(router);
+
+//Tools
+oxu(router);
+currency(router);
 
 //Admin
 adminHome(router);

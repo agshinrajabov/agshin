@@ -38,9 +38,6 @@ var hbs = exphbs.create({
         },
         lowerExten: function(file) {
             return file.split('.').pop();
-        },
-        clean: function(value) {
-            return value.replace(/\s/g,'');
         }
     },
     partialsDir: [

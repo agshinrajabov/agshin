@@ -9,15 +9,32 @@
     </section>
     <section class="container" style="margin-bottom:10rem">
         <div class="tools-area">
-            {{#each data}}
-                <a href="/tools/{{link}}" class="tools-col">
-                    <div class="tools-col__img"><img src="{{logo}}" alt="{{name}}"></div>
-                    <div class="tools-col__details">
-                        <div class="tools-col__details__title">{{name}}</div>
-                        <div class="tools-col__details__subtitle">{{description}}</div>
+            <div class="tools-col">
+                <div class="tools-col__img">
+                    <img src="../assets/img/oxu.png" alt="Oxu.AZ">
+                </div>
+                <div class="tools-col__details">
+                    <div class="tools-col__details__title">
+                        Oxu.az News API
                     </div>
-                </a>
-            {{/each}}
+                    <div class="tools-col__details__subtitle">
+                        Daily shared news API.
+                    </div>
+                </div>
+            </div>
+            <div class="tools-col">
+                <div class="tools-col__img">
+                    <img src="../assets/img/currency.png" alt="Oxu.AZ">
+                </div>
+                <div class="tools-col__details">
+                    <div class="tools-col__details__title">
+                        Currency API
+                    </div>
+                    <div class="tools-col__details__subtitle">
+                        Instantly currency in AZ lang.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
      {{> footer}}

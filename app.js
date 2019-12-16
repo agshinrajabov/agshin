@@ -32,7 +32,7 @@ const oxu = require('./pages/tools/oxu');
 const currency = require('./pages/tools/currency');
 
 //Admin
-const adminHome = require('./pages/admin/app');
+// const adminHome = require('./pages/admin/app');
 
 //View Settings
 app.use('/assets', express.static('./dist'));
@@ -61,8 +61,8 @@ branding(router);
 oxu(router);
 currency(router);
 
-//Admin
-adminHome(router);
+// //Admin
+// adminHome(router);
 
 
 async function main(html) {

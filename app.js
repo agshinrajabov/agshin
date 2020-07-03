@@ -37,6 +37,7 @@ const fonts = require('./pages/tools/fonts');
 
 //View Settings
 app.use('/assets', express.static('./dist'));
+app.use('/fonts', express.static('./fonts'));
 app.use('/adassets', express.static('./admin'));
 app.set('view engine', 'hbs');
 app.engine('hbs', hbs.engine);

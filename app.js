@@ -30,6 +30,7 @@ const branding = require('./pages/services/branding');
 //Tools
 const oxu = require('./pages/tools/oxu');
 const currency = require('./pages/tools/currency');
+const fonts = require('./pages/tools/fonts');
 
 //Admin
 // const adminHome = require('./pages/admin/app');
@@ -60,6 +61,7 @@ branding(router);
 //Tools
 oxu(router);
 currency(router);
+fonts(router);
 
 // //Admin
 // adminHome(router);

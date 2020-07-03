@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const minifyCSS = require('gulp-csso');
-const minifyImg = require('gulp-imagemin');
+// const minifyImg = require('gulp-imagemin');
 const minifyJS = require('gulp-uglify-es').default;
 const minifyHTML = require('gulp-htmlmin');
 const concat = require('gulp-concat');
@@ -55,21 +55,21 @@ gulp.task('html', (done) => {
         done();
 });
 
-gulp.task('img', (done) => {
-    console.log("Started");
-    gulp.src('src/img/**/*')
-        .pipe(minifyImg())
-        .pipe(gulp.dest('dist/img'));  
-        done(); 
-});
+// gulp.task('img', (done) => {
+//     console.log("Started");
+//     gulp.src('src/img/**/*')
+//         .pipe(minifyImg())
+//         .pipe(gulp.dest('dist/img'));  
+//         done(); 
+// });
 
-gulp.task('delete', () => del(['dist/css', 'dist/js', 'dist/img', 'dist/**/*.html']));
+gulp.task('delete', () => del(['dist/css', 'dist/js', 'dist/**/*.html']));
 
 gulp.task('watch', (done) => {
     gulp.watch("src/scss/**/*.scss", gulp.series('css'));
     gulp.watch("src/js/**/*.js",  gulp.series('js'));
     gulp.watch("src/img/**/*",  gulp.series('img'));
-    // gulp.watch("src/**/*.html",  gulp.series('html'));
+    gulp.watch("src/**/*.html",  gulp.series('html'));
     done();
 });
 
@@ -79,7 +79,6 @@ gulp.task('default', (done) => {
         'delete',
         'css',
         'js',
-        'img',
         'browser-sync',
         'watch'
     );
